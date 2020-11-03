@@ -12,6 +12,7 @@ class MyProfile extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 backgroundColor: Colors.red,
@@ -34,28 +35,30 @@ class MyProfile extends StatelessWidget {
                   letterSpacing: 2.5,
                 ),
               ),
-              Container(
+              Card(
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
-                padding: EdgeInsets.only(left: 10.0, right: 10.0),
-                height: 30.0,
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.mail_outline_outlined,
-                      size: 20.0,
+                child: ListTile(
+                  leading: Icon(Icons.mail_outline_outlined),
+                  title: Text(
+                    'obi_wan@iessaladillo.es',
+                    style: TextStyle(
+                      fontFamily: 'Roboto',
+                      fontSize: 15.0,
                     ),
-                    SizedBox(
-                      width: 10.0,
+                  ),
+                ),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(Icons.local_phone),
+                  title: Text(
+                    '+24 601242626',
+                    style: TextStyle(
+                      fontFamily: 'Roboto',
+                      fontSize: 15.0,
                     ),
-                    Text(
-                      'obi_wan@iessaladillo.es',
-                      style: TextStyle(
-                        fontFamily: 'Roboto',
-                        fontSize: 15.0,
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ],
